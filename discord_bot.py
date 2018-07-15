@@ -31,7 +31,7 @@ def get_prefix(
 
 
 bot = commands.Bot(command_prefix=get_prefix)
-endpoint = f'https://api.groupme.com/v3/bots/post'
+endpoint = 'https://api.groupme.com/v3/bots/post'
 
 sent_buffer = []  # Buffer for webhook message deletions.
 
