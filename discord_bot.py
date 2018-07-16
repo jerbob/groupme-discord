@@ -97,4 +97,3 @@ async def on_message(message: Message) -> None:
 def main():
     """Start the bot with the provided token."""
     Process(target=bot.run, args=(BOT_TOKEN,)).start()
-
