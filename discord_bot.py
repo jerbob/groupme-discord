@@ -2,8 +2,10 @@
 
 import json
 from os import path
+from sys import exit
 from io import BytesIO
 from random import randint
+from multiprocessing import Process
 from typing import List, Union, Optional, Callable
 
 from discord.ext import commands
@@ -59,7 +61,7 @@ async def process_attachments(attachments: List[Attachment]) -> str:
         return
     attachment = attachments[0]
     url = 'https://image.groupme.com/pictures'
-    if not attachment.filename.endswith(('jpeg', 'jpg', 'png')):
+    if not attachment.filename.endswith(('jpeg', 'jpg', 'png', 'gif')):
         return
     extension = attachment.filename.partition('.')[-1]
     if extension == 'jpg':
@@ -92,5 +94,7 @@ async def on_message(message: Message) -> None:
             await message.delete()
 
 
-if __name__ == '__main__':
-    bot.run(BOT_TOKEN)
+def main():
+    """Start the bot with the provided token."""
+    Process(target=bot.run, args=(BOT_TOKEN,)).start()
+

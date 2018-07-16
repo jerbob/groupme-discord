@@ -1,4 +1,4 @@
 Flask>=1.0.2
 aiohttp>=3.3.2
 requests>=2.18.4
-git+https://github.com/Rapptz/discord.py/archive/rewrite.zip#egg=discord.py
+git+https://github.com/Rapptz/discord.py/archive/rewrite.zip#egg=discord.py[voice]

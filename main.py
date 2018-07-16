@@ -1,18 +1,16 @@
 """Main entry point for running both server and bot."""
 
-from multiprocessing import Process
+import web_server
+import discord_bot
 
-from web_server import app
-from discord_bot import bot
-
-from constants import BOT_TOKEN, RUN_LOCAL
+from constants import RUN_LOCAL
 
 
-flask_options = {'debug': True}
+flask_options = {}
 
 if not RUN_LOCAL:
-    flask_options.update({'host': '0.0.0.0'})
+    flask_options = {'host': '0.0.0.0'}
 
+web_server.main()
+discord_bot.main()
 
-Process(target=bot.run, args=(BOT_TOKEN,)).start()
-Process(target=app.run, kwargs=flask_options).start()

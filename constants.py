@@ -20,7 +20,6 @@ def get_constant(
 
 
 RUN_LOCAL = config.getboolean('flask', 'run_locally')
-
 GROUPME_ID = get_constant('GROUPME_ID', 'groupme', 'bot_id')
 BOT_TOKEN = get_constant('DISCORD_BOT_TOKEN', 'discord', 'bot_token')
 WEBHOOK_URL = get_constant('DISCORD_WEBHOOK', 'discord', 'webhook_url')

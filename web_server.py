@@ -1,6 +1,7 @@
 """A server-side Flask app to parse POST requests from GroupMe."""
 
 from json import loads
+from multiprocessing import Process
 
 import requests
 from flask import Flask, request
@@ -22,3 +23,9 @@ def index():
             'avatar_url': message_object['avatar_url']
         }
     )
+
+
+def main(*args, **kwargs):
+    """Start the webserver with the provided options."""
+    Process(target=app.run, args=args, kwargs=kwargs).start()
+
