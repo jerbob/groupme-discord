@@ -4,4 +4,4 @@ python:
 install:
   - pip install -r requirements-ci.txt
 script:
-  - flake8 tapmap
+  - flake8
