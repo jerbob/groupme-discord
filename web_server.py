@@ -23,6 +23,7 @@ def index():
             'avatar_url': message_object['avatar_url']
         }
     )
+    return ''
 
 
 def main(*args, **kwargs):
