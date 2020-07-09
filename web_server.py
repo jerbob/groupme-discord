@@ -6,7 +6,6 @@ from multiprocessing import Process
 import requests
 from flask import Flask, request
 
-from constants import WEBHOOK_URL
 
 
 app = Flask(__name__)

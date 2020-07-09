@@ -19,7 +19,7 @@ def get_constant(
     return constant
 
 
-LOCAL_PORT = get_constant('flask', 'local_port')
+LOCAL_PORT = get_constant('LOCAL_PORT','flask', 'local_port')
 GROUPME_ID = get_constant('GROUPME_ID', 'groupme', 'bot_id')
 BOT_TOKEN = get_constant('DISCORD_BOT_TOKEN', 'discord', 'bot_token')
 WEBHOOK_URL = get_constant('DISCORD_WEBHOOK', 'discord', 'webhook_url')

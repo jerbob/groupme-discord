@@ -94,7 +94,7 @@ async def on_message(message: Message) -> None:
 
 def main(botToken, groupmeToken, groupmeID, channelName):
     global BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME
-    BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME = botToken,groupmeToken,groupmeID,channelID
+    BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME = botToken,groupmeToken,groupmeID,channelName
 
     """Start the bot with the provided token."""
     Process(target=bot.run, args=(BOT_TOKEN,)).start()
