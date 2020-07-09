@@ -8,8 +8,8 @@ from constants import RUN_LOCAL
 
 flask_options = {}
 
-if not RUN_LOCAL:
-    flask_options = {'host': '0.0.0.0'}
+if LOCAL_PORT:
+    flask_options = {'host': '0.0.0.0',port=LOCAL_PORT}
 
 discord_bot.main()
 web_server.main(**flask_options)
