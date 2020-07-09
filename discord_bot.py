@@ -12,8 +12,6 @@ from discord.ext import commands
 from aiohttp import ClientSession
 from discord import Attachment, Message
 
-from constants import BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_ID
-
 
 async def post(
     session: ClientSession, url: str,
@@ -87,13 +85,16 @@ async def on_ready() -> None:
 @bot.event
 async def on_message(message: Message) -> None:
     """Called on each message sent in a channel."""
-    if message.channel.id == CHANNEL_ID:
+    if CHANNEL_NAME in str(message.channel):
         if not message.author.bot:
             print(await send_message(message))
         elif message.content in sent_buffer:
             await message.delete()
 
 
-def main():
+def main(botToken, groupmeToken, groupmeID, channelName):
+    global BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME
+    BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME = botToken,groupmeToken,groupmeID,channelID
+
     """Start the bot with the provided token."""
     Process(target=bot.run, args=(BOT_TOKEN,)).start()

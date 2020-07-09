@@ -19,9 +19,9 @@ def get_constant(
     return constant
 
 
-LOCAL_PORT = config.getboolean('flask', 'local_port')
+LOCAL_PORT = get_constant('flask', 'local_port')
 GROUPME_ID = get_constant('GROUPME_ID', 'groupme', 'bot_id')
 BOT_TOKEN = get_constant('DISCORD_BOT_TOKEN', 'discord', 'bot_token')
 WEBHOOK_URL = get_constant('DISCORD_WEBHOOK', 'discord', 'webhook_url')
 GROUPME_TOKEN = get_constant('GROUPME_TOKEN', 'groupme', 'access_token')
-CHANNEL_ID = get_constant('DISCORD_CHANNEL_ID', 'discord', 'channel_id')
+CHANNEL_NAME = get_constant('DISCORD_CHANNEL_NAME', 'discord', 'channel_name')

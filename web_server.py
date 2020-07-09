@@ -26,6 +26,8 @@ def index():
     return ''
 
 
-def main(*args, **kwargs):
+def main(webhookURL,*args, **kwargs):
+    global WEBHOOK_URL
+    WEBHOOK_URL = webhookURL
     """Start the webserver with the provided options."""
     Process(target=app.run, args=args, kwargs=kwargs).start()
