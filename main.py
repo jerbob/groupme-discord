@@ -2,6 +2,7 @@
 
 import web_server
 import discord_bot
+import time
 
 from credentials import *
 
@@ -19,3 +20,4 @@ for instance in settings:
 
     discord_bot.main(BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME)
     web_server.main(WEBHOOK_URL, **flask_options)
+    time.sleep(2)
