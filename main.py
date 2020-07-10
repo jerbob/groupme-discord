@@ -13,11 +13,16 @@ for instance in settings:
     WEBHOOK_URL = instance['webhook_url']
     LOCAL_PORT = instance['local_port']
 
+    try:
+        gm_token=instance['groupme_token']
+    except KeyError:
+        gm_token=GROUPME_TOKEN
+
     flask_options = {}
 
     if "false" not in str(LOCAL_PORT):
         flask_options = {'host': '127.0.0.1', 'port': LOCAL_PORT}
 
-    discord_bot.main(BOT_TOKEN, GROUPME_TOKEN, GROUPME_ID, CHANNEL_NAME)
+    discord_bot.main(BOT_TOKEN,  gm_token, GROUPME_ID, CHANNEL_NAME)
     web_server.main(WEBHOOK_URL, **flask_options)
-    time.sleep(2)
+    time.sleep(1)
