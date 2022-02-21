@@ -1,5 +1,8 @@
 # GroupMeDiscord
 
+This fork is deprecated by a rewritten version of this written in Go to make it easier to deploy and it just works better for me personally. https://github.com/karmanyaahm/groupme_discord_bridge_v3
+
+---
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f75c31c547204176a8e8dc4412918b17)](https://app.codacy.com/app/AnonGuy/GroupMeDiscord?utm_source=github.com&utm_medium=referral&utm_content=AnonGuy/GroupMeDiscord&utm_campaign=Badge_Grade_Dashboard) [![Build Status](https://travis-ci.org/AnonGuy/GroupMeDiscord.svg?branch=master)](https://travis-ci.org/AnonGuy/GroupMeDiscord) [![Updates](https://pyup.io/repos/github/AnonGuy/GroupMeDiscord/shield.svg)](https://pyup.io/repos/github/AnonGuy/GroupMeDiscord/)
 
 
